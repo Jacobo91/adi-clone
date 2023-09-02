@@ -33,29 +33,49 @@
   .active {
     transform: translateY(0);
   }
-  .announcement-modal--text{
+  .announcement-modal--text {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     gap: 1rem;
   }
-  .announcement-modal-inner-text-division{
+  .announcement-modal-inner-text-division {
     max-width: 400px;
   }
-  .announcement-modal-inner-text-title{
+  .announcement-modal-inner-text-title {
     font-weight: bold;
     font-size: 1.4rem;
   }
-  .announcement-modal-inner-paragraph{
+  .announcement-modal-inner-paragraph {
     font-size: 1.2rem;
   }
-  .announcement-modal-inner-anchor{
+  .announcement-modal-inner-anchor {
     font-size: 1.3rem;
     color: black;
     font-weight: bold;
   }
-</style>
+  @media screen and (max-width: 960px) {
+    .announcement-modal--text {
+      flex-direction: column;
+      justify-content: flex-end;
+      gap: 3rem;
+      margin: 6rem 0 0 6rem;
+    }
+    .announcement-modal--content {
+      height: 100vh;
+    }
+  }
 
+  @media screen and (max-width: 525px) {
+    .announcement-modal--text {
+
+      margin: 2rem 0 0 2rem;
+    }
+    .announcement-modal--content {
+      height: 100vh;
+    }
+  }
+</style>
 
 <div class="announcement-modal inactive">
 
@@ -66,8 +86,8 @@
         X
       </button>
     </div>
-    <div class="announcement-modal--text" >
-      <div class="announcement-modal-inner-text-division" >
+    <div class="announcement-modal--text">
+      <div class="announcement-modal-inner-text-division">
         <h5 class="announcement-modal-inner-text-title">
           💎 ¡LAS COLABORACIONES DE ADIDAS SON UNA EXPRESIÓN DE CREATIVIDAD! 💎
         </h5>
@@ -75,8 +95,8 @@
           ¡CONÓCELAS AQUÍ!
         </a>
       </div>
-      <div class="announcement-modal-inner-text-division" >
-        <h5 class="announcement-modal-inner-text-title" >
+      <div class="announcement-modal-inner-text-division">
+        <h5 class="announcement-modal-inner-text-title">
           ¡ACUMULA HASTA +30% EXTRA EN EL OUTLET!🤑💸
         </h5>
         <p class="announcement-modal-inner-paragraph">
@@ -89,5 +109,3 @@
     </div>
   </div>
 </div>
-
-
