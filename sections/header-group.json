@@ -8,16 +8,24 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "Welcome to our store",
+            "text": "💎 ¡LAS COLABORACIONES DE ADIDAS SON UNA EXPRESIÓN DE CREATIVIDAD! 💎",
+            "link": ""
+          }
+        },
+        "d7b398ec-0d62-4dbf-bf42-ebaa2f21c3cd": {
+          "type": "announcement",
+          "settings": {
+            "text": "¡ACUMULA HASTA +30% EXTRA EN EL OUTLET!🤑💸",
             "link": ""
           }
         }
       },
       "block_order": [
-        "announcement-bar-0"
+        "announcement-bar-0",
+        "d7b398ec-0d62-4dbf-bf42-ebaa2f21c3cd"
       ],
       "settings": {
-        "color_scheme": "background-1",
+        "color_scheme": "inverse",
         "show_line_separator": true,
         "show_social": false,
         "auto_rotate": false,
