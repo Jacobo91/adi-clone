@@ -5,7 +5,7 @@
 }
 
 .banner__box {
-  text-align: center;
+  text-align: left;
 }
 
 /* Needed for gradient continuity with or without animation, the transform scopes the gradient to its container which happens already when animation are turned on */
@@ -350,10 +350,11 @@
 @media screen and (min-width: 750px) {
   .banner--desktop-transparent .banner__box {
     background: transparent;
-    max-width: 89rem;
+    max-width: 60rem;
     border: none;
     border-radius: 0;
     box-shadow: none;
+    text-align: left;
   }
 
   .banner--desktop-transparent .button--secondary {
@@ -418,12 +419,13 @@
 
 @media screen and (min-width: 1400px) {
   .banner__box {
-    max-width: 90rem;
+    max-width: 40rem;
   }
 }
 
 .banner__heading {
   margin-bottom: 0;
+  color: black;
 }
 
 .banner__box .banner__heading + * {

@@ -2288,7 +2288,6 @@ product-info .loading-overlay:not(.hidden) ~ *,
   padding: 1rem 0;
   margin: 0;
   letter-spacing: 0.1rem;
-  min-height: 3.8rem;
   font-size: 11px;
 }
 
