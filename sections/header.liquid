@@ -156,8 +156,37 @@
       assign localization_forms = true
     endif
   -%}
+
+  <style>
+    .header-top{
+      display: flex;
+      margin-right: 1.25rem;
+      height: 32px;
+    }
+    .header-top__span{
+      flex: 1;
+    }
+    .header-top__ul{
+      display: flex;
+      font-size: 12px;
+      list-style: none;
+    }
+    .header-top__ul > li{
+      margin-inline: 5px;
+    }
+  </style>
+
+  <div class="header-top" >
+    <span class="header-top__span" ></span>
+    <ul class="header-top__ul">
+      <li>ayuda</li>
+      <li>cambios y devoluciones</li>
+      <li>unete al club</li>
+    </ul>
+  </div>
   <header class="header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} page-width{% if section.settings.menu_type_desktop == 'drawer' %} drawer-menu{% endif %}{% if section.settings.menu != blank %} header--has-menu{% endif %}{% if has_app_block %} header--has-app{% endif %}{% if social_links %} header--has-social{% endif %}{% if shop.customer_accounts_enabled %} header--has-account{% endif %}{% if localization_forms %} header--has-localizations{% endif %}">
-    {%- liquid
+
+      {%- liquid
       if section.settings.menu != blank
         render 'header-drawer'
       endif
@@ -166,7 +195,7 @@
         render 'header-search', input_id: 'Search-In-Modal-1'
       endif
     -%}
-
+  
     {%- if section.settings.logo_position != 'middle-center' -%}
       {%- if request.page_type == 'index' -%}
         <h1 class="header__heading">
@@ -346,6 +375,7 @@
 {%- endif -%}
 
 {% javascript %}
+
   class StickyHeader extends HTMLElement {
     constructor() {
       super();
