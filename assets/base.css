@@ -2119,6 +2119,7 @@ product-info .loading-overlay:not(.hidden) ~ *,
 /* utility-bar */
 .utility-bar {
   height: 100%;
+  cursor: pointer;
 }
 
 .utility-bar--bottom-border {
