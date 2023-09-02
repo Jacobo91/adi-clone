@@ -78,7 +78,7 @@
   }
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 1220px) {
   .banner {
     flex-direction: row;
   }
@@ -141,7 +141,12 @@
   }
 }
 
-@media screen and (max-width: 749px) {
+@media screen and (max-width: 1220px) {
+
+  .banner--large:not(.banner--adapt) {
+    min-height:55rem;
+  }
+
   .banner:not(.banner--stacked) {
     flex-direction: row;
     flex-wrap: wrap;
@@ -153,6 +158,21 @@
 
   .banner--stacked .banner__media {
     flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 960px) {
+
+  .banner--large:not(.banner--adapt) {
+    min-height:45rem;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .banner__content{
+    background-image: url(../assets/second-hero-img.jpg);
+    background-position: center;
+    background-size: cover;
   }
 }
 
