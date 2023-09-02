@@ -88,6 +88,13 @@
 </style>
 
 {%- style -%}
+
+  @media screen and (max-width: 990px){
+    .header{
+      padding-bottom: 0px;
+    }
+  }
+
   .header {
     padding: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px 3rem {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px 3rem;
   }
@@ -156,7 +163,7 @@
       assign localization_forms = true
     endif
   -%}
-
+{% comment %} starts header top nav {% endcomment %}
   <style>
     .header-top{
       display: flex;
@@ -174,8 +181,13 @@
     .header-top__ul > li{
       margin-inline: 5px;
     }
+    @media screen and (max-width: 990px){
+      .header-top{
+        display: none;
+      }
+    }
   </style>
-
+  
   <div class="header-top" >
     <span class="header-top__span" ></span>
     <ul class="header-top__ul">
@@ -184,6 +196,7 @@
       <li>unete al club</li>
     </ul>
   </div>
+
   <header class="header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} page-width{% if section.settings.menu_type_desktop == 'drawer' %} drawer-menu{% endif %}{% if section.settings.menu != blank %} header--has-menu{% endif %}{% if has_app_block %} header--has-app{% endif %}{% if social_links %} header--has-social{% endif %}{% if shop.customer_accounts_enabled %} header--has-account{% endif %}{% if localization_forms %} header--has-localizations{% endif %}">
 
       {%- liquid
