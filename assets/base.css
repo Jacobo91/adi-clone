@@ -2828,15 +2828,15 @@ details[open] > .header__submenu {
 
 .header__menu-item:hover {
   color: rgb(var(--color-foreground));
-}
+} 
 
 .header__menu-item span {
   transition: text-decoration var(--duration-short) ease;
-}
+} 
 
-.header__menu-item:hover span {
-  text-decoration: underline;
-  text-underline-offset: 0.3rem;
+
+.list-menu--inline > li:hover{
+  border-bottom: 3px solid black;
 }
 
 details[open] > .header__menu-item {

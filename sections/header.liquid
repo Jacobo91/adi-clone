@@ -69,7 +69,7 @@
   .list-menu__item {
     display: flex;
     align-items: center;
-    line-height: calc(1 + 0.3 / var(--font-body-scale));
+    
   }
 
   .list-menu__item--link {
@@ -392,6 +392,28 @@
       </a>
     </div>
   </header>
+    {% comment %}
+      header drop down
+    {% endcomment %} 
+  <style>
+    .header__drop-down{
+      border-top: 1px solid grey;
+      border-bottom: 1px solid grey;
+      width: 100%;
+      background-color: white;
+    }
+    .inactive{
+      display: none;
+    }
+    .active{
+        display: block;
+    }
+  </style>
+
+  <div class="header__drop-down inactive">
+    <h1>hello</h1>
+  </div>
+
 </{% if section.settings.sticky_header_type != 'none' %}sticky-header{% else %}div{% endif %}>
 
 {%- if settings.cart_type == "notification" -%}
