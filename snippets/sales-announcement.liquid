@@ -1,0 +1,59 @@
+<style>
+.sales-announcement {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 15;
+    width: 100%;
+    background-color: #207BC6;
+    text-align: center;
+    display: grid;
+    grid-template-areas: 'span text button';
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    justify-content: baseline;
+    color: white;
+}
+.sales-announcement__text{
+    margin: 0;
+    text-align: center;
+    padding: 1rem;
+}
+.sales-announcement__button{
+    border: none;
+    width: 30px;
+    height: 30px;
+    justify-self: right;
+    padding-right: 4rem;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+}
+.closed{
+    display: none;
+}
+.sales-announcement__anchor{
+    text-transform: uppercase;
+    color: white
+}
+</style>
+
+<div class="sales-announcement">
+    <span></span>
+    <p class="sales-announcement__text">
+        ¡COMPRA MÁS, AHORRA MÁS!🤑💸 Descuentos acumulables de hasta +30% en el Outlet.
+        {% for link in linklists['promociones'].links %}
+            <a href="{{ link.url }}"
+                class="sales-announcement__anchor"
+            >
+                Ver Ahora
+            </a>
+        {% endfor %}
+    </p>
+    <button
+        class="sales-announcement__button"
+    >
+        X
+    </button>
+</div>
+
